@@ -13,8 +13,16 @@ This specification is organized into feature-based subfolders for better managem
 Foundation systems required by all features
 
 - **Requirements**: Authentication, onboarding, project setup, database integration
-- **Key Components**: Authentication, navigation, user management, error handling
+- **Key Components**: Authentication, user management, error handling, API setup
 - **Priority**: Must be implemented first
+
+### 🎨 [Shared UI](./shared-ui/)
+
+Frontend components, layout, and state management shared across all features
+
+- **Requirements**: Layout system, design components, Pinia stores, responsive design
+- **Key Components**: AppHeader, AppSidebar, BaseComponents, Theme system, UI stores
+- **Priority**: Should be implemented alongside or after Shared Infrastructure
 
 ### 🔧 [Document Generation](./document-generation/)
 
@@ -50,11 +58,11 @@ AI-powered communication templates with strategic timing guidance
 
 ## Development Approach
 
-### Phase 1: Foundation (Shared Infrastructure)
+### Phase 1: Foundation
 
-1. Complete all tasks in [Shared Infrastructure](./shared-infrastructure/tasks.md)
-2. Set up project dependencies, authentication, and basic UI
-3. Create mock data stores for feature development
+1. **Shared Infrastructure**: Complete backend setup, authentication, and database integration
+2. **Shared UI**: Build layout system, design components, and frontend state management
+3. Create mock data stores and basic navigation for feature development
 
 ### Phase 2: Feature Development (can be done in parallel)
 
@@ -96,19 +104,22 @@ AI-powered communication templates with strategic timing guidance
 .kiro/specs/job-search-sage/
 ├── README.md                           # This overview file
 ├── design.md                          # Overall system architecture
-├── shared-infrastructure/
-│   ├── requirements.md               # Foundation requirements
-│   └── tasks.md                     # Foundation tasks
-├── document-generation/
+├── shared-infrastructure/              # Backend foundation
+│   ├── requirements.md               # Backend/API requirements
+│   └── tasks.md                     # Backend setup tasks
+├── shared-ui/                         # Frontend foundation
+│   ├── requirements.md               # UI/UX requirements
+│   └── tasks.md                     # Frontend component tasks
+├── document-generation/               # Feature: AI document generation
 │   ├── requirements.md               # Document generation requirements
 │   └── tasks.md                     # Document generation tasks
-├── ai-chat/
+├── ai-chat/                          # Feature: AI coaching chat
 │   ├── requirements.md               # AI chat requirements
 │   └── tasks.md                     # AI chat tasks
-├── job-tracking-pipeline/
+├── job-tracking-pipeline/            # Feature: Job pipeline management
 │   ├── requirements.md               # Job pipeline requirements
 │   └── tasks.md                     # Job pipeline tasks
-└── professional-communication/
+└── professional-communication/        # Feature: Communication templates
     ├── requirements.md               # Communication requirements
     └── tasks.md                     # Communication tasks
 ```

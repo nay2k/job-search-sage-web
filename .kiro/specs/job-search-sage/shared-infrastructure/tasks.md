@@ -1,6 +1,8 @@
 # Shared Infrastructure - Implementation Tasks
 
-## Foundation Tasks (Must be completed first)
+## Backend Foundation Tasks (Must be completed first)
+
+**Note**: Frontend UI tasks (components, layout, stores) are now in [Shared UI](../shared-ui/tasks.md)
 
 - [ ] 1. Set up project dependencies and configuration
 - [ ] 1.1 Install and configure required dependencies
@@ -19,38 +21,29 @@
   - Create development and production environment configs
   - _Requirements: 6.1_
 
-- [ ] 2. Create basic UI framework and layout
-- [ ] 2.1 Build core layout components
+- [ ] 2. Set up routing and middleware
 
-  - Create main navigation component with responsive design
-  - Build layout components (header, sidebar, main content area)
-  - Implement Tailwind CSS design system and component library
-  - Create loading states and error boundary components
-  - _Requirements: 6.2_
-
-- [ ] 2.2 Set up routing and navigation
-
-  - Create main dashboard page with routing structure
-  - Build navigation between different feature sections
-  - Implement protected route middleware for authentication
-  - Add breadcrumb navigation and page titles
-  - _Requirements: 6.2_
+  - Configure Nuxt routing and page structure
+  - Implement server middleware for authentication
+  - Create API route structure and organization
+  - Set up protected route middleware for server-side protection
+  - _Requirements: 6.1_
 
 - [ ] 3. Implement user authentication system
-- [ ] 3.1 Set up Supabase authentication
+- [ ] 3.1 Set up Supabase authentication backend
 
-  - Install and configure Supabase client
-  - Create authentication pages (login, register, forgot password)
-  - Build `LoginForm.vue` and `RegisterForm.vue` components
-  - Implement `useAuth` composable for authentication state management
+  - Install and configure Supabase client for server-side operations
+  - Create server API endpoints for authentication (login, register, logout)
+  - Implement JWT token validation and session management
+  - Set up user registration and profile creation logic
   - _Requirements: 1.1, 6.3_
 
-- [ ] 3.2 Create authentication middleware and guards
+- [ ] 3.2 Create authentication middleware
 
-  - Implement server middleware for protected routes
-  - Create client-side route guards for authentication
-  - Add logout functionality and session handling
-  - Build authentication error handling and recovery
+  - Implement server middleware for API route protection
+  - Create session validation and refresh logic
+  - Add server-side authentication error handling
+  - Build user context injection for protected routes
   - _Requirements: 1.1_
 
 - [ ] 4. Build user onboarding system
